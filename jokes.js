@@ -9,15 +9,16 @@ function generateJoke() {
                 'Content-Type': 'text/plain'
             },
             url: 'https://icanhazdadjoke.com/',
-            data: 'data',
-            success: function (response) {
+            data: 'data',   //TODO try getting rid of this line
+            success: function(response) {
                 $('#jokeDisplay').replaceWith(`<div id="jokeDisplay">${response}</div>`)
             },
-            error: function(){
+            error: function() {
                 alert('Failed to get joke')
             }
         })
-    });
+
+    })
 }
 
 $(function() {
